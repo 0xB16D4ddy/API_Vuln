@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "054ba5ba-7ee9-48a7-9dc6-09ad497404e6",
+		"_postman_id": "64679aa5-c69e-4f8b-9a5a-9da1315fcca5",
 		"name": "vAPI",
 		"description": "vAPI is Vulnerable Adversely Programmed Interface which is Self-Hostable API Interface that mimics OWASP API Top 10 scenarios in the means of Exercises.",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20809633"
 	},
 	"item": [
 		{
@@ -51,14 +52,15 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"\",\r\n    \"name\": \"\",\r\n    \"course\": \"\",\r\n    \"password\": \"\"\r\n}"
+							"raw": "{\r\n    \"username\": \"test\",\r\n    \"name\": \"test\",\r\n    \"course\": \"owasp_top10_api\",\r\n    \"password\": \"123456\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api1/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api1/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api1",
@@ -96,11 +98,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api1/user/{{api1_id}}",
+							"raw": "http://{{host}}:{{port}}/vapi/api1/user/{{api1_id}}",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api1",
@@ -156,11 +159,12 @@
 							"raw": "{\r\n    \"username\":\"\",\r\n    \"name\":\"\",\r\n    \"course\":\"\",\r\n    \"password\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api1/user/{{api1_id}}",
+							"raw": "http://{{host}}:{{port}}/vapi/api1/user/{{api1_id}}",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api1",
@@ -227,11 +231,12 @@
 							"raw": "{\r\n    \"email\":\"\",\r\n    \"password\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api2/user/login",
+							"raw": "http://{{host}}:{{port}}/vapi/api2/user/login",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api2",
@@ -254,11 +259,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api2/user/details",
+							"raw": "http://{{host}}:{{port}}/vapi/api2/user/details",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api2",
@@ -311,11 +317,12 @@
 							"raw": "{\r\n    \"username\":\"\",\r\n    \"password\":\"\",\r\n    \"name\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api3/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api3/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api3",
@@ -367,11 +374,12 @@
 							"raw": "{\r\n    \"mobileno\":\"8000000535\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api4/login",
+							"raw": "http://{{host}}:{{port}}/vapi/api4/login",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api4",
@@ -411,11 +419,12 @@
 							"raw": "{\r\n    \"otp\":\"9999\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api4/otp/verify",
+							"raw": "http://{{host}}:{{port}}/vapi/api4/otp/verify",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api4",
@@ -443,11 +452,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api4/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api4/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api4",
@@ -520,11 +530,12 @@
 							"raw": "{\r\n    \"username\":\"testuser2\",\r\n    \"password\":\"test123\",\r\n    \"name\":\"Test User\",\r\n    \"address\":\"ABC\",\r\n    \"mobileno\":\"888888888\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api5/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api5/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api5",
@@ -546,11 +557,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api5/user/{{api5_id}}",
+							"raw": "http://{{host}}:{{port}}/vapi/api5/user/{{api5_id}}",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api5",
@@ -619,11 +631,12 @@
 							"raw": "{\r\n    \"name\":\"\",\r\n    \"username\":\"\",\r\n    \"password\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api6/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api6/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api6",
@@ -645,11 +658,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api6/user/me",
+							"raw": "http://{{host}}:{{port}}/vapi/api6/user/me",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api6",
@@ -719,11 +733,12 @@
 							"raw": "{\r\n    \"username\":\"\",\r\n    \"password\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api7/user",
+							"raw": "http://{{host}}:{{port}}/vapi/api7/user",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api7",
@@ -751,11 +766,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api7/user/login",
+							"raw": "http://{{host}}:{{port}}/vapi/api7/user/login",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api7",
@@ -778,11 +794,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api7/user/key",
+							"raw": "http://{{host}}:{{port}}/vapi/api7/user/key",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api7",
@@ -805,11 +822,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api7/user/logout",
+							"raw": "http://{{host}}:{{port}}/vapi/api7/user/logout",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api7",
@@ -876,11 +894,12 @@
 							"raw": "{\r\n    \"username\":\"\",\r\n    \"password\":\"\"\r\n}"
 						},
 						"url": {
-							"raw": "http://{{host}}/vapi/api8/user/login",
+							"raw": "http://{{host}}:{{port}}/vapi/api8/user/login",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api8",
@@ -903,11 +922,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api8/user/secret",
+							"raw": "http://{{host}}:{{port}}/vapi/api8/user/secret",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api8",
@@ -963,15 +983,54 @@
 									"raw": "{\r\n    \"username\":\"richardbranson\",\r\n    \"pin\":\"****\"\r\n}"
 								},
 								"url": {
-									"raw": "http://{{host}}/vapi/api9/v2/user/login",
+									"raw": "http://{{host}}:{{port}}/vapi/api9/v2/user/login",
 									"protocol": "http",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"api9",
 										"v2",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"richardbranson\",\r\n    \"pin\":\"****\"\r\n}"
+								},
+								"url": {
+									"raw": "http://{{host}}:{{port}}/vapi/api9/v1/user/login",
+									"protocol": "http",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"vapi",
+										"api9",
+										"v1",
 										"user",
 										"login"
 									]
@@ -1019,11 +1078,12 @@
 							}
 						],
 						"url": {
-							"raw": "http://{{host}}/vapi/api10/user/flag",
+							"raw": "http://{{host}}:{{port}}/vapi/api10/user/flag",
 							"protocol": "http",
 							"host": [
 								"{{host}}"
 							],
+							"port": "{{port}}",
 							"path": [
 								"vapi",
 								"api10",
@@ -1094,10 +1154,11 @@
 									"raw": "{\r\n    \"username\":\"\",\r\n    \"password\":\"\"\r\n}"
 								},
 								"url": {
-									"raw": "{{host}}/vapi/jwt/user",
+									"raw": "{{host}}:{{port}}/vapi/jwt/user",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"jwt",
@@ -1124,10 +1185,11 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}/vapi/jwt/user",
+									"raw": "{{host}}:{{port}}/vapi/jwt/user",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"jwt",
@@ -1162,10 +1224,11 @@
 									"raw": ""
 								},
 								"url": {
-									"raw": "{{host}}/vapi/serversurfer?url=https://roottusk.com",
+									"raw": "{{host}}:{{port}}/vapi/serversurfer?url=https://roottusk.com",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"serversurfer"
@@ -1201,10 +1264,11 @@
 									"raw": "{\n    \"note\":\"Hello I am Tushar\"\n}"
 								},
 								"url": {
-									"raw": "{{host}}/vapi/stickynotes",
+									"raw": "{{host}}:{{port}}/vapi/stickynotes",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"stickynotes"
@@ -1219,10 +1283,11 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/vapi/stickynotes?format=json",
+									"raw": "{{host}}:{{port}}/vapi/stickynotes?format=html",
 									"host": [
 										"{{host}}"
 									],
+									"port": "{{port}}",
 									"path": [
 										"vapi",
 										"stickynotes"
