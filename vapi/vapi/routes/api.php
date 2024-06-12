@@ -43,6 +43,7 @@ Route::post('api2/user/login','App\Http\Controllers\API2UsersController@login');
 
 Route::get('api2/user/details','App\Http\Controllers\API2UsersController@show');
 
+Route::get('api2/user/details/{id}','App\Http\Controllers\API2UsersController@view');
 
 /* API 3 */
 

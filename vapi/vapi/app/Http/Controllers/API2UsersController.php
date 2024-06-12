@@ -15,7 +15,7 @@ class API2UsersController extends Controller
 
         if($user)
         {
-            return response(json_encode(array("success"=>"true","token"=>$user->token)), 200)
+            return response(json_encode(array("success"=>"true","id"=>$user->id,"token"=>$user->token)), 200)
             ->header('Content-Type', 'application/json');
         }
         else
@@ -28,25 +28,53 @@ class API2UsersController extends Controller
 
     public function show(Request $request)
     {
-        if($request->hasHeader('Authorization-Token') && $request->header('Authorization-Token')!="" )
-        {
-            $token=$request->header('Authorization-Token');
+        // if($request->hasHeader('Authorization-Token') && $request->header('Authorization-Token')!="" )
+        // {
+        //     $token=$request->header('Authorization-Token');
 
-            if(API2Users::where('token',$token)->count() > 0)
-            {
-                return API2Users::all();
-            }
-            else
-            {
-                return response(json_encode(array("success"=>"false","cause"=>"InvalidToken")), 401)
-                ->header('Content-Type', 'application/json');
-            }
+        //     if(API2Users::where('token',$token)->count() > 0)
+        //     {
+        //         return API2Users::all();
+        //     }
+        //     else
+        //     {
+        //         return response(json_encode(array("success"=>"false","cause"=>"InvalidToken")), 401)
+        //         ->header('Content-Type', 'application/json');
+        //     }
 
 
-        }
+        // }
 
-        return response(json_encode(array("success"=>"false","cause"=>"authHeaderNotSet")), 403)
-            ->header('Content-Type', 'application/json');
+        // return response(json_encode(array("success"=>"false","cause"=>"authHeaderNotSet")), 403)
+        //     ->header('Content-Type', 'application/json');
+
+        return API2Users::all();
+
+    }
+
+    public function view(Request $request, $id)
+    {
+        // if($request->hasHeader('Authorization-Token') && $request->header('Authorization-Token')!="" )
+        // {
+        //     $token=$request->header('Authorization-Token');
+
+        //     if(API2Users::where('token',$token)->count() > 0)
+        //     {
+        //         return API2Users::all();
+        //     }
+        //     else
+        //     {
+        //         return response(json_encode(array("success"=>"false","cause"=>"InvalidToken")), 401)
+        //         ->header('Content-Type', 'application/json');
+        //     }
+
+
+        // }
+
+        // return response(json_encode(array("success"=>"false","cause"=>"authHeaderNotSet")), 403)
+        //     ->header('Content-Type', 'application/json');
+
+        return API2Users::find($id);
 
     }
 }

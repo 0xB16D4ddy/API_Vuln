@@ -15,3 +15,5 @@ services:
    - 8084:5000
   environment:
    - vulnerable=1
+  volumes:
+  - .:/vampi
